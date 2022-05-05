@@ -1,0 +1,24 @@
+.logo {
+  @include grid(center, center, 1rem);
+  grid-template-columns: min(30vw, 2.5rem) 1fr;
+
+  color: $clr-dark;
+  font-weight: 700;
+  font-size: 120%;
+
+  .logo__icon {
+    width: min(5vw, 3.5rem);
+
+    .icon__rect {
+      fill: $clr-primary;
+    }
+
+    .icon__circle {
+      fill: $clr-light;
+    }
+
+    .icon__plus--line {
+      fill: $clr-primary;
+    }
+  }
+}
