@@ -1,0 +1,69 @@
+.header__menu {
+  @include flex(row, space-between, center);
+
+  width: 100%;
+
+  @media screen and (max-width: $breakpoint-md) {
+    @include position(fixed, 0, 0, unset, 0);
+    @include color-scheme(#fff, $clr-dark);
+    @include grid(center, center);
+
+    grid-template-rows: 1fr auto;
+    grid-template-columns: auto;
+    width: min(100%, 30rem);
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 1000;
+
+    &--open {
+      transform: translateX(0);
+    }
+  }
+
+  .header__navbar {
+    text-align: center;
+
+    @media screen and (max-width: $breakpoint-md) {
+      width: 100%;
+    }
+
+    .navbar__list {
+      @include flex(row, unset, center, 1rem);
+
+      @media screen and (max-width: $breakpoint-md) {
+        @include flex(column, center, center, 0);
+      }
+
+      .navbar__item {
+        padding: 1rem;
+        font-weight: 500;
+
+        @media screen and (max-width: $breakpoint-md) {
+          width: 75%;
+
+          &:not(:last-of-type) {
+            box-shadow: inset 0 -0.1rem 0 0 $clr-grey;
+          }
+        }
+      }
+    }
+  }
+
+  .header__btns {
+    @include grid(center, center, 0.5rem);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: auto;
+
+    width: 100%;
+
+    @media screen and (max-width: $breakpoint-xs) {
+      grid-template-rows: repeat(2, minmax(0, 1fr));
+      grid-template-columns: auto;
+      width: 100%;
+    }
+
+    @media screen and (min-width: $breakpoint-md) {
+      width: max-content;
+    }
+  }
+}
