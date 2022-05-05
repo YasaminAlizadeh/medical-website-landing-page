@@ -1,0 +1,24 @@
+.form__field {
+  @include grid(center, center, 1rem);
+  @include color-scheme($clr-light, $clr-dark);
+
+  width: 100%;
+  padding: min(5vw, 1rem);
+  grid-template-columns: auto 1fr;
+  border-radius: 0.75rem;
+  box-shadow: 0 0 0 0.1rem $clr-grey;
+
+  &:focus-within {
+    box-shadow: 0 0 0 0.2rem $clr-secondary;
+  }
+
+  .form__input {
+    border: 0;
+    background-color: transparent;
+    outline: 0;
+  }
+
+  .form__icon {
+    font-size: 120%;
+  }
+}
