@@ -1,0 +1,40 @@
+@use "sass:list";
+
+@mixin color-scheme($bg: $clr-light, $color: $clr-dark) {
+  color: $color;
+
+  @if (length($bg) == 1) {
+    background-color: $bg;
+  } @else {
+    background-image: linear-gradient(141deg, $bg);
+  }
+}
+
+@mixin flex($direction: row, $jc: flex-start, $ai: flex-start, $gap: 0) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $jc;
+  align-items: $ai;
+  gap: $gap;
+}
+
+@mixin grid($ji, $ai, $gap: 0) {
+  display: grid;
+  justify-items: $ji;
+  align-items: $ai;
+  justify-content: unset;
+  gap: $gap;
+}
+
+@mixin grid-center() {
+  display: grid;
+  place-items: center;
+}
+
+@mixin position($type, $top, $bottom, $left, $right) {
+  position: $type;
+  top: $top;
+  bottom: $bottom;
+  left: $left;
+  right: $right;
+}
