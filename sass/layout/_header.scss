@@ -1,0 +1,40 @@
+.header__wrapper {
+  @include position(fixed, 0, unset, 0, 0);
+  z-index: 1000;
+  transition: background-color 0.3s ease-in-out,
+    backdrop-filter 0.3s ease-in-out;
+  backdrop-filter: blur(1rem) opacity(0);
+
+  &.header__wrapper--scrolled {
+    @include color-scheme(rgba($clr-accent, 0.9));
+
+    @supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
+      @include color-scheme(rgba($clr-accent, 0.75));
+
+      backdrop-filter: blur(1rem) opacity(1);
+    }
+  }
+
+  & > .container {
+    @include grid(center, center, 2.5rem);
+
+    grid-template-columns: auto 1fr;
+
+    @media screen and (max-width: $breakpoint-md) {
+      @include flex(row, space-between, center);
+    }
+
+    .menu__btn {
+      display: none;
+
+      @media screen and (max-width: $breakpoint-md) {
+        display: grid;
+        width: min-content;
+
+        &--close {
+          @include position(absolute, 0, unset, unset, 0);
+        }
+      }
+    }
+  }
+}
