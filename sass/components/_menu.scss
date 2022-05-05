@@ -4,10 +4,11 @@
   width: 100%;
 
   @media screen and (max-width: $breakpoint-md) {
-    @include position(fixed, 0, 0, unset, 0);
+    @include position(fixed, 0, unset, unset, 0);
     @include color-scheme(#fff, $clr-dark);
     @include grid(center, center);
 
+    min-height: 100vh;
     grid-template-rows: 1fr auto;
     grid-template-columns: auto;
     width: min(100%, 30rem);
