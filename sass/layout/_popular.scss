@@ -1,0 +1,54 @@
+.search__tabs {
+  .container {
+    @include grid(flex-start, flex-start, (5rem 0));
+    grid-template-columns: 100%;
+    grid-template-areas: "heading" "labels" "slider";
+
+    h2 {
+      grid-area: heading;
+    }
+
+    .tabs__labels {
+      @include grid(flex-start, center, 1rem);
+
+      grid-area: labels;
+      height: 80%;
+      padding-right: 1.5rem;
+      margin-right: 1.5rem;
+      box-shadow: 0.3rem 0 0 -0.1rem $clr-primary;
+
+      @media screen and (min-width: $breakpoint-md) {
+        padding-right: 3rem;
+        margin-right: 3rem;
+      }
+
+      .tab__label {
+        color: $clr-secondary;
+        font-weight: 500;
+        cursor: pointer;
+        transition: color 0.3s ease-in-out;
+
+        &.tab__label--active {
+          color: $clr-dark;
+          font-weight: 600;
+        }
+
+        &:hover {
+          color: rgba($clr-dark, 0.75);
+        }
+      }
+
+      @media screen and (max-width: $breakpoint-xs) {
+        height: 100%;
+        width: 100%;
+        padding-bottom: 1.5rem;
+        box-shadow: 0 0.3rem 0 -0.1rem $clr-primary;
+      }
+    }
+
+    @media screen and (min-width: $breakpoint-xs) {
+      grid-template-columns: auto 1fr;
+      grid-template-areas: "heading heading" "labels slider";
+    }
+  }
+}
