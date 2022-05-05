@@ -1,0 +1,55 @@
+.search__wrapper {
+  @include color-scheme(#fff, $clr-dark);
+
+  grid-area: search;
+  align-self: flex-start;
+  position: relative;
+  width: 100%;
+  padding: min(5vw, 3rem) min(5vw, 2rem);
+  margin: auto;
+  border-radius: 1rem;
+  box-shadow: rgba($clr-dark, 0.25) 0px 50px 100px -20px,
+    rgba($clr-dark, 0.3) 0px 30px 60px -30px;
+  transform-style: preserve-3d;
+
+  &::before {
+    @include position(absolute, 50%, 0, 50%, 0);
+    @include color-scheme($clr-light);
+
+    content: "";
+    width: 100vw;
+    height: 51%;
+    transform: translate3d(-50%, 0, -1px);
+  }
+
+  .search__form {
+    @include grid(flex-start, center, 1rem);
+
+    grid-template-areas: "input--1" "input--2" "submit" "suggestions";
+
+    @media screen and (min-width: $breakpoint-s) {
+      gap: 2rem;
+      grid-template-areas: "input--1 input--2 submit" "suggestions suggestions suggestions";
+      grid-template-columns: repeat(2, minmax(0, 1fr)) auto;
+    }
+
+    .form__field {
+      &:nth-of-type(1) {
+        grid-area: input--1;
+      }
+
+      &:nth-of-type(2) {
+        grid-area: input--2;
+      }
+    }
+
+    .form__submit {
+      grid-area: submit;
+      padding: min(5vw, 1.75rem);
+
+      @media screen and (min-width: $breakpoint-s) {
+        aspect-ratio: 1;
+      }
+    }
+  }
+}
