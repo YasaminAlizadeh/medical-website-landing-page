@@ -1,0 +1,77 @@
+*,
+*::before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  vertical-align: baseline;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @include grid(center, center, 5rem);
+  grid-template-columns: 100%;
+  @include color-scheme($clr-light, $clr-dark);
+
+  main {
+    display: grid;
+    grid-template-columns: 100%;
+    gap: 5rem;
+  }
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: $clr-dark;
+}
+
+input,
+select,
+textarea,
+img {
+  width: 100%;
+}

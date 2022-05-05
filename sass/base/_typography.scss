@@ -1,0 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+*,
+*::before,
+*:after {
+  font-family: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Poppins", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  font-size: clamp(0.8rem, 5vw, 1.5rem);
+}
+
+button,
+input {
+  font: inherit;
+}
+
+h1 {
+  font-size: min(6.5vmin, 7.5rem);
+}
+
+h2 {
+  font-size: min(6vmin, 4rem);
+}
+
+.description {
+  color: $clr-secondary;
+}
