@@ -1,0 +1,33 @@
+.search__suggestions {
+  @include flex(column, center, flex-start, 1.5rem);
+
+  grid-area: suggestions;
+
+  b {
+    font-size: 110%;
+  }
+
+  .suggestions__list {
+    @include flex(row, flex-start, center, min(3vw, 1rem));
+
+    flex-wrap: wrap;
+
+    .suggestion__item {
+      @include color-scheme($clr-accent, $clr-dark);
+
+      padding: 0.5rem 1rem;
+      border-radius: 0.5rem;
+      cursor: pointer;
+      transition: opacity 0.3s ease-in-out;
+
+      &:hover {
+        opacity: 0.85;
+      }
+
+      &:last-of-type {
+        color: $clr-primary;
+        font-weight: 500;
+      }
+    }
+  }
+}
