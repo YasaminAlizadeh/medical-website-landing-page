@@ -1,0 +1,25 @@
+.btn {
+  @include grid-center;
+
+  width: 100%;
+  padding: min(5vw, 1rem) min(5vw, 1.5rem);
+  border: 0;
+  background-color: transparent;
+  font-weight: 500;
+  border-radius: 0.5rem;
+  text-align: justify;
+  cursor: pointer;
+  transition: opacity 0.25s ease-in-out;
+
+  &:hover {
+    opacity: 0.9;
+  }
+
+  &--primary {
+    @include color-scheme($clr-primary, $clr-light);
+  }
+
+  &--secondary {
+    @include color-scheme(transparent, $clr-dark);
+  }
+}
