@@ -1,0 +1,59 @@
+.hero__icon {
+  @extend .round-corners;
+  @extend .center-items;
+
+  @include position(absolute, 50%, unset, 50%, unset);
+
+  box-shadow: inset 0 0 0 0.1rem $clr-grey;
+  transform: translate(-50%, -50%);
+  animation: spin 6.5s linear infinite;
+
+  &:nth-of-type(3n + 1) {
+    animation-direction: reverse;
+  }
+
+  $widths: 30%, 45%, 60%, 75%, 85%;
+  $delays: 0.5s, 0.1s, 0.9s, 0.35s, 0.85s;
+
+  @for $i from 1 to 5 {
+    $width: nth($widths, $i);
+    $delay: nth($delays, $i);
+
+    &:nth-of-type(#{$i}) {
+      width: $width;
+      animation-delay: $delay;
+    }
+  }
+
+  i {
+    @extend .round-corners;
+    @extend .center-items;
+
+    @include position(absolute, 100%, unset, 50%, unset);
+    @include color-scheme(#fff, $clr-primary);
+
+    padding: min(2.5vw, 1rem);
+    transform: translate(-50%);
+    animation: spin-rev 6.5s linear infinite;
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: translate(-50%, -50%) rotateZ(0);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) rotateZ(360deg);
+  }
+}
+
+@keyframes spin-rev {
+  0% {
+    transform: translate(-50%, -50%) rotateZ(0);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) rotateZ(-360deg);
+  }
+}
