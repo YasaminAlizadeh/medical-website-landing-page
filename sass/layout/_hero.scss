@@ -1,0 +1,83 @@
+@use "sass:list";
+
+.hero__wrapper {
+  @include grid(center, center, 1rem);
+  @include color-scheme($clr-accent);
+
+  min-height: 100vh;
+  padding-top: 10rem;
+  background: linear-gradient(
+      141deg,
+      rgba($clr-accent, 0.95),
+      rgba($clr-accent, 0.75)
+    ),
+    url("../../assets/images/hero/national-cancer-institute-odggKTyA5o0-unsplash.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 75%;
+  overflow-x: clip;
+
+  .container {
+    @include grid(center, center, (0 2rem));
+
+    grid-template-columns: 100%;
+    grid-template-areas: "info" "img" "search";
+    padding-bottom: 0;
+    margin-bottom: 0;
+
+    @media screen and (min-width: $breakpoint-md) {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      grid-template-areas: "info img" "search search";
+    }
+  }
+
+  .hero--left {
+    @include flex(column, center, center, 2.5rem);
+
+    grid-area: info;
+
+    @media screen and (min-width: $breakpoint-s) {
+      @include flex(column, center, flex-start, 2.5rem);
+    }
+
+    .hero__title {
+      width: min(100%, 75rem);
+    }
+
+    .hero__btns {
+      @include grid(center, center, 1rem);
+
+      @media screen and (min-width: $breakpoint-s) {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        align-items: stretch;
+        width: min(100%, 45rem);
+      }
+
+      .hero__btn {
+        @include grid(center, center, 1.5rem);
+        @include color-scheme($clr-dark, $clr-light);
+        grid-template-columns: auto 1fr;
+      }
+    }
+  }
+
+  .hero--right {
+    @include grid(center, center, 0);
+
+    grid-area: img;
+    align-self: flex-end;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+
+    .hero__img {
+      @extend .center-items;
+
+      margin-top: auto;
+
+      img {
+        z-index: 1;
+      }
+    }
+  }
+}
