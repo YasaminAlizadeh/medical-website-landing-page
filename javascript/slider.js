@@ -1,8 +1,8 @@
 let splide;
 
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", function () {
   splide = new Splide(".splide", {
-    perPage: 6,
+    perPage: 5,
     perMove: 1,
     start: 0,
     rewind: true,

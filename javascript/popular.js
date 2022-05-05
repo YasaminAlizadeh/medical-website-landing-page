@@ -34,8 +34,8 @@ const changePopularItems = (label) => {
   data.forEach((item) => {
     const { icon, title } = item;
 
-    const li = document.createElement("li");
-    li.className = "splide__slide tab__item";
+    const slide = document.createElement("li");
+    slide.className = "splide__slide tab__item";
 
     const element = `
         <a class="splide__slide__container">
@@ -48,12 +48,14 @@ const changePopularItems = (label) => {
             </a>
         `;
 
-    li.innerHTML = element;
+    slide.innerHTML = element;
 
-    itemsList.appendChild(li);
+    splide.add(slide);
   });
 
   splide.refresh();
 };
 
-changePopularItems("specialities");
+document.addEventListener("DOMContentLoaded", () => {
+  changePopularItems("specialities");
+});
