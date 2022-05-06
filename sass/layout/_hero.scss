@@ -25,7 +25,7 @@
     padding-bottom: 0;
     margin-bottom: 0;
 
-    @media screen and (min-width: $breakpoint-md) {
+    @media screen and (min-width: #{$breakpoint-md}px) {
       grid-template-columns: repeat(2, minmax(0, 1fr));
       grid-template-areas: "info img" "search search";
     }
@@ -36,7 +36,7 @@
 
     grid-area: info;
 
-    @media screen and (min-width: $breakpoint-s) {
+    @media screen and (min-width: #{$breakpoint-s}px) {
       @include flex(column, center, flex-start, 2.5rem);
     }
 
@@ -47,7 +47,7 @@
     .hero__btns {
       @include grid(center, center, 1rem);
 
-      @media screen and (min-width: $breakpoint-s) {
+      @media screen and (min-width: #{$breakpoint-s}px) {
         grid-template-columns: repeat(2, minmax(0, 1fr));
         align-items: stretch;
         width: min(100%, 45rem);

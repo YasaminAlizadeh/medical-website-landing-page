@@ -6,19 +6,19 @@
 
     grid-template-columns: 100%;
 
-    @media screen and (min-width: $breakpoint-md) {
+    @media screen and (min-width: #{$breakpoint-md}px) {
       grid-template-columns: minmax(0, 1fr) auto minmax(0, 1.5fr);
       padding-top: unset;
       padding-bottom: unset;
     }
 
-    @media screen and (min-width: $breakpoint-lg) {
+    @media screen and (min-width: #{$breakpoint-lg}px) {
       grid-template-columns: minmax(0, 1fr) auto minmax(0, 2fr);
       gap: 3rem;
     }
 
     .features--left {
-      @media screen and (max-width: $breakpoint-md) {
+      @media screen and (max-width: #{$breakpoint-md - 1}px) {
         display: none;
       }
 
@@ -47,7 +47,7 @@
     }
 
     .features__box {
-      @media screen and (max-width: $breakpoint-md) {
+      @media screen and (max-width: #{$breakpoint-md - 1}px) {
         display: none;
       }
 

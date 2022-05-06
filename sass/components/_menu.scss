@@ -3,7 +3,7 @@
 
   width: 100%;
 
-  @media screen and (max-width: $breakpoint-md) {
+  @media screen and (max-width: #{$breakpoint-md - 1}px) {
     @include position(fixed, 0, unset, unset, 0);
     @include color-scheme(#fff, $clr-dark);
     @include grid(center, center);
@@ -24,14 +24,14 @@
   .header__navbar {
     text-align: center;
 
-    @media screen and (max-width: $breakpoint-md) {
+    @media screen and (max-width: #{$breakpoint-md - 1}px) {
       width: 100%;
     }
 
     .navbar__list {
       @include flex(row, unset, center, 1rem);
 
-      @media screen and (max-width: $breakpoint-md) {
+      @media screen and (max-width: #{$breakpoint-md - 1}px) {
         @include flex(column, center, center, 0);
       }
 
@@ -39,7 +39,7 @@
         padding: 1rem;
         font-weight: 500;
 
-        @media screen and (max-width: $breakpoint-md) {
+        @media screen and (max-width: #{$breakpoint-md - 1}px) {
           width: 75%;
 
           &:not(:last-of-type) {
@@ -57,13 +57,13 @@
 
     width: 100%;
 
-    @media screen and (max-width: $breakpoint-xs) {
+    @media screen and (max-width: #{$breakpoint-xs - 1}px) {
       grid-template-rows: repeat(2, minmax(0, 1fr));
       grid-template-columns: auto;
       width: 100%;
     }
 
-    @media screen and (min-width: $breakpoint-md) {
+    @media screen and (min-width: #{$breakpoint-md}px) {
       width: max-content;
     }
   }

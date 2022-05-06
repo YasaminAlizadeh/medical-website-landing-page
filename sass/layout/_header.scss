@@ -20,14 +20,14 @@
 
     grid-template-columns: auto 1fr;
 
-    @media screen and (max-width: $breakpoint-md) {
+    @media screen and (max-width: #{$breakpoint-md - 1}px) {
       @include flex(row, space-between, center);
     }
 
     .menu__btn {
       display: none;
 
-      @media screen and (max-width: $breakpoint-md) {
+      @media screen and (max-width: #{$breakpoint-md - 1}px) {
         display: grid;
         width: min-content;
 

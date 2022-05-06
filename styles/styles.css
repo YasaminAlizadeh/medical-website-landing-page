@@ -434,7 +434,7 @@ h2 {
     justify-content: unset;
     gap: 2.5rem;
     grid-template-columns: auto 1fr; }
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 767px) {
       .header__wrapper > .container {
         display: flex;
         flex-direction: row;
@@ -443,7 +443,7 @@ h2 {
         gap: 0; } }
     .header__wrapper > .container .menu__btn {
       display: none; }
-      @media screen and (max-width: 768px) {
+      @media screen and (max-width: 767px) {
         .header__wrapper > .container .menu__btn {
           display: grid;
           width: min-content; }
@@ -618,7 +618,7 @@ h2 {
         font-weight: 600; }
       .search__tabs .container .tabs__labels .tab__label:hover {
         color: rgba(10, 23, 46, 0.75); }
-    @media screen and (max-width: 300px) {
+    @media screen and (max-width: 299px) {
       .search__tabs .container .tabs__labels {
         height: 100%;
         width: 100%;
@@ -703,7 +703,7 @@ h2 {
   border-radius: 1rem;
   z-index: 1;
   box-shadow: rgba(10, 23, 46, 0.25) 0px 50px 100px -20px, rgba(10, 23, 46, 0.3) 0px 30px 60px -30px; }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 767px) {
     .features__wrapper--first .container .features__form {
       display: none; } }
 .features__wrapper--first .container .features--right {
@@ -718,7 +718,7 @@ h2 {
   background-position: center;
   background-repeat: no-repeat;
   box-shadow: 0 0 0 1.9rem #f8f8f8, 0 0 0 2rem #8198a083, 0 0 0 3.9rem #f8f8f8, 0 0 0 4rem #8198a083; }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 767px) {
     .features__wrapper--first .container .features--right {
       display: none; } }
 
@@ -753,7 +753,7 @@ h2 {
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat; }
-      @media screen and (max-width: 768px) {
+      @media screen and (max-width: 767px) {
         .features__wrapper--second .container .features--left {
           display: none; } }
       .features__wrapper--second .container .features--left .features__img {
@@ -779,7 +779,7 @@ h2 {
       border-radius: 1rem;
       z-index: 1;
       box-shadow: rgba(10, 23, 46, 0.25) 0px 50px 100px -20px, rgba(10, 23, 46, 0.3) 0px 30px 60px -30px; }
-      @media screen and (max-width: 768px) {
+      @media screen and (max-width: 767px) {
         .features__wrapper--second .container .features__box {
           display: none; } }
       .features__wrapper--second .container .features__box .box__item {
@@ -870,7 +870,7 @@ h2 {
   align-items: center;
   gap: 0;
   width: 100%; }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 767px) {
     .header__menu {
       position: fixed;
       top: 0;
@@ -895,7 +895,7 @@ h2 {
         transform: translateX(0); } }
   .header__menu .header__navbar {
     text-align: center; }
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 767px) {
       .header__menu .header__navbar {
         width: 100%; } }
     .header__menu .header__navbar .navbar__list {
@@ -904,7 +904,7 @@ h2 {
       justify-content: unset;
       align-items: center;
       gap: 1rem; }
-      @media screen and (max-width: 768px) {
+      @media screen and (max-width: 767px) {
         .header__menu .header__navbar .navbar__list {
           display: flex;
           flex-direction: column;
@@ -914,7 +914,7 @@ h2 {
       .header__menu .header__navbar .navbar__list .navbar__item {
         padding: 1rem;
         font-weight: 500; }
-        @media screen and (max-width: 768px) {
+        @media screen and (max-width: 767px) {
           .header__menu .header__navbar .navbar__list .navbar__item {
             width: 75%; }
             .header__menu .header__navbar .navbar__list .navbar__item:not(:last-of-type) {
@@ -928,7 +928,7 @@ h2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     grid-template-rows: auto;
     width: 100%; }
-    @media screen and (max-width: 300px) {
+    @media screen and (max-width: 299px) {
       .header__menu .header__btns {
         grid-template-rows: repeat(2, minmax(0, 1fr));
         grid-template-columns: auto;

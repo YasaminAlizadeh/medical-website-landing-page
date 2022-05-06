@@ -1,12 +1,12 @@
 .features__wrapper--first {
   .container {
-    @media screen and (min-width: $breakpoint-md) {
+    @media screen and (min-width: #{$breakpoint-md}px) {
       @include grid(flex-start, center, 1rem);
 
       grid-template-columns: minmax(0, 10fr) auto minmax(0, 1fr);
     }
 
-    @media screen and (min-width: $breakpoint-lg) {
+    @media screen and (min-width: #{$breakpoint-lg}px) {
       @include grid(flex-start, center, 1rem);
 
       grid-template-columns: minmax(0, 2fr) auto minmax(0, 1fr);
@@ -61,7 +61,7 @@
     }
 
     .features__form {
-      @media screen and (max-width: $breakpoint-md) {
+      @media screen and (max-width: #{$breakpoint-md - 1}px) {
         display: none;
       }
 
@@ -80,7 +80,7 @@
     }
 
     .features--right {
-      @media screen and (max-width: $breakpoint-md) {
+      @media screen and (max-width: #{$breakpoint-md - 1}px) {
         display: none;
       }
 
