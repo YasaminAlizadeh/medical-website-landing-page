@@ -228,8 +228,8 @@
             <li class="tab__label">Procedures</li>
           </ul>
 
-          <div id="slider" class="slider">
-            <div id="slider-content" class="splide" aria-label="Splide">
+          <div id="slider1" class="slider">
+            <div id="splide1" class="splide" aria-label="Splide">
               <div class="splide__track tabs__content">
                 <ul id="search-list" class="splide__list tab__items"></ul>
               </div>
@@ -428,58 +428,14 @@
             We.care gives you the tools and information you need to
           </p>
 
-          <div class="staff__slider">
-            <div class="staff__slide">
-              <div class="staff__item">
-                <img src="" class="item__img" />
-                <h3 class="item__title">Dr. Leslie Alexander</h3>
-                <p class="description item__description">Dental Surgery</p>
-              </div>
-
-              <div class="staff__item">
-                <img src="" class="item__img" />
-                <h3 class="item__title">Dr. Kathryn Murphy</h3>
-                <p class="description item__description">Pediatric Medicine</p>
-              </div>
-
-              <div class="staff__item">
-                <img src="" class="item__img" />
-                <h3 class="item__title">Dr. Robert Fox</h3>
-                <p class="description item__description">Gastroenterologist</p>
-              </div>
-
-              <div class="staff__item">
-                <img src="" class="item__img" />
-                <h3 class="item__title">Dr. Esther Howard</h3>
-                <p class="description item__description">Thoracic Surgeon</p>
-              </div>
-
-              <div class="staff__item">
-                <img src="" class="item__img" />
-                <h3 class="item__title">Dr. Albert Flores</h3>
-                <p class="description item__description">Intern Neurologist</p>
-              </div>
-
-              <div class="staff__item">
-                <img src="" class="item__img" />
-                <h3 class="item__title">Dr. Jerome Bell</h3>
-                <p class="description item__description">
-                  Obstetrician and Gynecologist
-                </p>
-              </div>
-
-              <div class="staff__item">
-                <img src="" class="item__img" />
-                <h3 class="item__title">Dr. Arlene McCoy</h3>
-                <p class="description item__description">Cardiologist</p>
-              </div>
-
-              <div class="staff__item">
-                <img src="" class="item__img" />
-                <h3 class="item__title">Dr. Jeremy Wilson</h3>
-                <p class="description item__description">
-                  Intern Dermatologist
-                </p>
+          <div id="slider2" class="slider">
+            <div
+              id="splide2"
+              class="splide splide__slide staff__slider"
+              aria-label="Splide"
+            >
+              <div class="splide__track slider__track">
+                <ul id="staff-list" class="splide__list staff__list"></ul>
               </div>
             </div>
           </div>
@@ -588,12 +544,15 @@
     </footer>
 
     <script src="./assets/data/popular_searches.js"></script>
+    <script src="./assets/data/staff.js"></script>
 
     <script src="./javascript/splide.js"></script>
 
+    <script src="./javascript/helpers.js"></script>
     <script src="./javascript/menu.js"></script>
     <script src="./javascript/search.js"></script>
     <script src="./javascript/slider.js"></script>
     <script src="./javascript/popular.js"></script>
+    <script src="./javascript/staff.js"></script>
   </body>
 </html>
