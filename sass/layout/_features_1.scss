@@ -1,0 +1,101 @@
+.features__wrapper--first {
+  .container {
+    @media screen and (min-width: $breakpoint-md) {
+      @include grid(flex-start, center, 1rem);
+
+      grid-template-columns: minmax(0, 10fr) auto minmax(0, 1fr);
+    }
+
+    @media screen and (min-width: $breakpoint-lg) {
+      @include grid(flex-start, center, 1rem);
+
+      grid-template-columns: minmax(0, 2fr) auto minmax(0, 1fr);
+    }
+
+    .features--left {
+      @include grid(flex-start, center, 2rem);
+
+      .features__list {
+        @include grid(flex-start, center, 2rem);
+
+        .features__item {
+          @include grid(flex-start, center, 1rem);
+          grid-template-columns: min-content 1fr;
+          grid-template-areas: "icon title" "seperator description";
+
+          .item__icon {
+            @extend .center-items;
+            @extend .round-corners;
+
+            grid-area: icon;
+            padding: min(5vw, 1rem);
+          }
+
+          $colors: #6b1ce8, $clr-primary, #00b848;
+
+          @for $i from 1 to 4 {
+            $color: nth($colors, $i);
+
+            &:nth-of-type(#{$i}) .item__icon {
+              @include color-scheme(rgba($color, 0.075), $color);
+            }
+          }
+
+          h3 {
+            grid-area: title;
+          }
+
+          .item__seperator {
+            grid-area: seperator;
+            width: 0.2rem;
+            height: 100%;
+            margin: auto;
+            background-color: $clr-grey;
+          }
+
+          .item__description {
+            grid-area: description;
+          }
+        }
+      }
+    }
+
+    .features__form {
+      @media screen and (max-width: $breakpoint-md) {
+        display: none;
+      }
+
+      @include grid(center, center, 1rem);
+      @include color-scheme(#fff, $clr-dark);
+
+      grid-area: 1/ 2/ -1/ 3;
+      width: 55%;
+      height: fit-content;
+      padding: min(5vw, 1.5rem);
+      margin-top: auto;
+      border-radius: 1rem;
+      z-index: 1;
+      box-shadow: rgba($clr-dark, 0.25) 0px 50px 100px -20px,
+        rgba($clr-dark, 0.3) 0px 30px 60px -30px;
+    }
+
+    .features--right {
+      @media screen and (max-width: $breakpoint-md) {
+        display: none;
+      }
+
+      grid-area: 1/ 2/ -1/ -1;
+      position: relative;
+      width: 90%;
+      height: 100%;
+      margin-left: auto;
+      border-radius: 43% 57% 29% 71% / 58% 44% 56% 42%;
+      background-image: url("../../assets/images/features/1_bg.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      box-shadow: 0 0 0 1.9rem $clr-light, 0 0 0 2rem #8198a083,
+        0 0 0 3.9rem $clr-light, 0 0 0 4rem #8198a083;
+    }
+  }
+}
