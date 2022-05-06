@@ -163,7 +163,7 @@ h2 {
   background-color: #e7f0fe;
   min-height: 100vh;
   padding-top: 10rem;
-  background: linear-gradient(141deg, rgba(231, 240, 254, 0.95), rgba(231, 240, 254, 0.75)), url("../../assets/images/hero/national-cancer-institute-odggKTyA5o0-unsplash.jpg");
+  background: linear-gradient(141deg, rgba(231, 240, 254, 0.95), rgba(231, 240, 254, 0.75)), url("/assets/images/hero/national-cancer-institute-odggKTyA5o0-unsplash.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 75%;
@@ -411,7 +411,7 @@ h2 {
   height: 100%;
   margin-left: auto;
   border-radius: 43% 57% 29% 71% / 58% 44% 56% 42%;
-  background-image: url("../../assets/images/features/1_bg.jpg");
+  background-image: url("/assets/images/features/1_bg.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
