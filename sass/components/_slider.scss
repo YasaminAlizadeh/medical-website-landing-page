@@ -4,7 +4,7 @@
   grid-area: slider;
 
   .splide {
-    position: absolute;
+    // position: absolute;
     width: 100%;
 
     .splide__slide {
@@ -12,21 +12,10 @@
       border-radius: 1rem;
       cursor: pointer;
       text-align: center;
-      box-shadow: inset 0 0 0 0.1rem $clr-grey;
       transition: opacity 0.3s ease-in-out;
 
       &:hover {
         opacity: 0.8;
-      }
-
-      .splide__slide__container {
-        @include flex(column, space-between, center, 1rem);
-        padding: min(5vw, 2rem) 0;
-        font-weight: 500;
-
-        .item__icon {
-          @extend .center-items;
-        }
       }
     }
 
