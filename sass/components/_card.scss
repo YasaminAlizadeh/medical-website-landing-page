@@ -1,0 +1,16 @@
+.staff__item {
+  .item__wrapper {
+    @include grid(center, center, 1rem);
+
+    padding: 1.5rem;
+    box-shadow: inset 0 0 0 0.1rem $clr-grey;
+    border-radius: 1rem;
+
+    .item__img {
+      aspect-ratio: 1;
+      object-fit: cover;
+      background-color: $clr-grey;
+      border-radius: 1rem;
+    }
+  }
+}
