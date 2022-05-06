@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 @use "sass:list";
-.center-items, .hero__wrapper .hero--right .hero__img, .features__wrapper--first .container .features--left .features__list .features__item .item__icon, .features__wrapper--second .container .features__box .box__item .item__wrapper .item__img, .features__wrapper--second .container .features--right .features__list .features__item .item__icon, .hero__icon, .hero__icon i, .slider .splide .splide__slide .splide__slide__container .item__icon {
+.center-items, .hero__wrapper .hero--right .hero__img, .features__wrapper--first .container .features--left .features__list .features__item .item__icon, .features__wrapper--second .container .features__box .box__item .item__wrapper .item__img, .features__wrapper--second .container .features--right .features__list .features__item .item__icon, .hero__icon, .hero__icon i, .tab__item .splide__slide__container .item__icon {
   display: grid;
   place-items: center; }
 
@@ -624,6 +624,8 @@ h2 {
         width: 100%;
         padding-bottom: 1.5rem;
         box-shadow: 0 0.3rem 0 -0.1rem #0443a7; } }
+  .search__tabs .container .slider .splide {
+    position: absolute; }
   @media screen and (min-width: 300px) {
     .search__tabs .container {
       grid-template-columns: auto 1fr;
@@ -822,6 +824,35 @@ h2 {
             color: #0443a7;
             line-height: 1;
             box-shadow: 0 0 0 0.2rem #0443a7; }
+
+.staff__wrapper .container {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  justify-content: unset;
+  gap: 1rem;
+  grid-template-columns: 100%;
+  grid-template-areas: "heading" "description" "slider"; }
+  .staff__wrapper .container .staff__title {
+    grid-area: heading; }
+  .staff__wrapper .container .staff__description {
+    grid-area: description; }
+  .staff__wrapper .container .slider {
+    margin-top: 5rem; }
+    .staff__wrapper .container .slider .staff__slider .slider__track .staff__list .staff__slide {
+      display: grid;
+      justify-items: center;
+      align-items: center;
+      justify-content: unset;
+      gap: 1rem;
+      height: fit-content;
+      grid-template-columns: repeat(1, minmax(0, 1fr)); }
+      @media screen and (min-width: 576px) {
+        .staff__wrapper .container .slider .staff__slider .slider__track .staff__list .staff__slide {
+          grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+      @media screen and (min-width: 1200px) {
+        .staff__wrapper .container .slider .staff__slider .slider__track .staff__list .staff__slide {
+          grid-template-columns: repeat(4, minmax(0, 1fr)); } }
 
 .logo {
   display: grid;
@@ -1051,25 +1082,15 @@ h2 {
   width: 100%;
   grid-area: slider; }
   .slider .splide {
-    position: absolute;
     width: 100%; }
     .slider .splide .splide__slide {
       width: 100%;
       border-radius: 1rem;
       cursor: pointer;
       text-align: center;
-      box-shadow: inset 0 0 0 0.1rem rgba(0, 0, 0, 0.075);
       transition: opacity 0.3s ease-in-out; }
       .slider .splide .splide__slide:hover {
         opacity: 0.8; }
-      .slider .splide .splide__slide .splide__slide__container {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        gap: 1rem;
-        padding: min(5vw, 2rem) 0;
-        font-weight: 500; }
     .slider .splide .pagination__bar {
       position: relative;
       margin-top: 1.5rem; }
@@ -1093,6 +1114,17 @@ h2 {
     .slider .splide:hover .slider__arrow {
       opacity: 1; }
 
+.tab__item {
+  box-shadow: inset 0 0 0 0.1rem rgba(0, 0, 0, 0.075); }
+  .tab__item .splide__slide__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    padding: min(5vw, 2rem) 0;
+    font-weight: 500; }
+
 ::-webkit-scrollbar {
   height: 0.5rem;
   width: 0.5rem; }
@@ -1105,5 +1137,20 @@ h2 {
 
 ::-webkit-scrollbar-thumb:hover {
   background: rgba(4, 67, 167, 0.75); }
+
+.staff__item .item__wrapper {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  justify-content: unset;
+  gap: 1rem;
+  padding: 1.5rem;
+  box-shadow: inset 0 0 0 0.1rem rgba(0, 0, 0, 0.075);
+  border-radius: 1rem; }
+  .staff__item .item__wrapper .item__img {
+    aspect-ratio: 1;
+    object-fit: cover;
+    background-color: rgba(0, 0, 0, 0.075);
+    border-radius: 1rem; }
 
 /*# sourceMappingURL=styles.css.map */
