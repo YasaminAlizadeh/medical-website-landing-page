@@ -12,16 +12,20 @@
     animation-direction: reverse;
   }
 
-  $widths: 30%, 45%, 60%, 75%, 85%;
+  $widths: 30%, 45%, 60%, 75%, 90%;
   $delays: 0.5s, 0.1s, 0.9s, 0.35s, 0.85s;
 
-  @for $i from 1 to 5 {
+  @for $i from 1 to 6 {
     $width: nth($widths, $i);
     $delay: nth($delays, $i);
 
     &:nth-of-type(#{$i}) {
       width: $width;
       animation-delay: $delay;
+
+      i {
+        animation-delay: $delay;
+      }
     }
   }
 
