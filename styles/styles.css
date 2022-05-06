@@ -1,10 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 @use "sass:list";
-.center-items, .hero__wrapper .hero--right .hero__img, .hero__icon, .hero__icon i, .slider .splide .splide__slide .splide__slide__container .item__icon {
+.center-items, .hero__wrapper .hero--right .hero__img, .features__wrapper--first .container .features--left .features__list .features__item .item__icon, .hero__icon, .hero__icon i, .slider .splide .splide__slide .splide__slide__container .item__icon {
   display: grid;
   place-items: center; }
 
-.round-corners, .hero__icon, .hero__icon i {
+.round-corners, .features__wrapper--first .container .features--left .features__list .features__item .item__icon, .hero__icon, .hero__icon i {
   aspect-ratio: 1/ 1;
   border-radius: 50%; }
 
@@ -31,7 +31,7 @@ body {
   body main {
     display: grid;
     grid-template-columns: 100%;
-    gap: 10rem; }
+    gap: min(15vw, 15rem); }
 
 article,
 aside,
@@ -232,7 +232,8 @@ h2 {
     .hero__wrapper .hero--right .hero__img {
       margin-top: auto; }
       .hero__wrapper .hero--right .hero__img img {
-        z-index: 1; }
+        z-index: 1;
+        width: min(50vw, 50rem); }
 
 .search__wrapper {
   color: #0a172e;
@@ -298,7 +299,6 @@ h2 {
     justify-content: unset;
     gap: 1rem;
     grid-area: labels;
-    height: 80%;
     padding-right: 1.5rem;
     margin-right: 1.5rem;
     box-shadow: 0.3rem 0 0 -0.1rem #0443a7; }
@@ -326,6 +326,99 @@ h2 {
     .search__tabs .container {
       grid-template-columns: auto 1fr;
       grid-template-areas: "heading heading" "labels slider"; } }
+
+@media screen and (min-width: 768px) {
+  .features__wrapper--first .container {
+    display: grid;
+    justify-items: flex-start;
+    align-items: center;
+    justify-content: unset;
+    gap: 1rem;
+    grid-template-columns: minmax(0, 10fr) auto minmax(0, 1fr); } }
+@media screen and (min-width: 992px) {
+  .features__wrapper--first .container {
+    display: grid;
+    justify-items: flex-start;
+    align-items: center;
+    justify-content: unset;
+    gap: 1rem;
+    grid-template-columns: minmax(0, 2fr) auto minmax(0, 1fr); } }
+.features__wrapper--first .container .features--left {
+  display: grid;
+  justify-items: flex-start;
+  align-items: center;
+  justify-content: unset;
+  gap: 2rem; }
+  .features__wrapper--first .container .features--left .features__list {
+    display: grid;
+    justify-items: flex-start;
+    align-items: center;
+    justify-content: unset;
+    gap: 2rem; }
+    .features__wrapper--first .container .features--left .features__list .features__item {
+      display: grid;
+      justify-items: flex-start;
+      align-items: center;
+      justify-content: unset;
+      gap: 1rem;
+      grid-template-columns: min-content 1fr;
+      grid-template-areas: "icon title" "seperator description"; }
+      .features__wrapper--first .container .features--left .features__list .features__item .item__icon {
+        grid-area: icon;
+        padding: min(5vw, 1rem); }
+      .features__wrapper--first .container .features--left .features__list .features__item:nth-of-type(1) .item__icon {
+        color: #6b1ce8;
+        background-color: rgba(107, 28, 232, 0.075); }
+      .features__wrapper--first .container .features--left .features__list .features__item:nth-of-type(2) .item__icon {
+        color: #0443a7;
+        background-color: rgba(4, 67, 167, 0.075); }
+      .features__wrapper--first .container .features--left .features__list .features__item:nth-of-type(3) .item__icon {
+        color: #00b848;
+        background-color: rgba(0, 184, 72, 0.075); }
+      .features__wrapper--first .container .features--left .features__list .features__item h3 {
+        grid-area: title; }
+      .features__wrapper--first .container .features--left .features__list .features__item .item__seperator {
+        grid-area: seperator;
+        width: 0.2rem;
+        height: 100%;
+        margin: auto;
+        background-color: rgba(0, 0, 0, 0.075); }
+      .features__wrapper--first .container .features--left .features__list .features__item .item__description {
+        grid-area: description; }
+.features__wrapper--first .container .features__form {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  justify-content: unset;
+  gap: 1rem;
+  color: #0a172e;
+  background-color: #fff;
+  grid-area: 1/ 2/ -1/ 3;
+  width: 55%;
+  height: fit-content;
+  padding: min(5vw, 1.5rem);
+  margin-top: auto;
+  border-radius: 1rem;
+  z-index: 1;
+  box-shadow: rgba(10, 23, 46, 0.25) 0px 50px 100px -20px, rgba(10, 23, 46, 0.3) 0px 30px 60px -30px; }
+  @media screen and (max-width: 768px) {
+    .features__wrapper--first .container .features__form {
+      display: none; } }
+.features__wrapper--first .container .features--right {
+  grid-area: 1/ 2/ -1/ -1;
+  position: relative;
+  width: 90%;
+  height: 100%;
+  margin-left: auto;
+  border-radius: 43% 57% 29% 71% / 58% 44% 56% 42%;
+  background-image: url("../../assets/images/features/1_bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-shadow: 0 0 0 1.9rem #f8f8f8, 0 0 0 2rem #8198a083, 0 0 0 3.9rem #f8f8f8, 0 0 0 4rem #8198a083; }
+  @media screen and (max-width: 768px) {
+    .features__wrapper--first .container .features--right {
+      display: none; } }
 
 .logo {
   display: grid;
@@ -455,15 +548,28 @@ h2 {
   .hero__icon:nth-of-type(1) {
     width: 30%;
     animation-delay: 0.5s; }
+    .hero__icon:nth-of-type(1) i {
+      animation-delay: 0.5s; }
   .hero__icon:nth-of-type(2) {
     width: 45%;
     animation-delay: 0.1s; }
+    .hero__icon:nth-of-type(2) i {
+      animation-delay: 0.1s; }
   .hero__icon:nth-of-type(3) {
     width: 60%;
     animation-delay: 0.9s; }
+    .hero__icon:nth-of-type(3) i {
+      animation-delay: 0.9s; }
   .hero__icon:nth-of-type(4) {
     width: 75%;
     animation-delay: 0.35s; }
+    .hero__icon:nth-of-type(4) i {
+      animation-delay: 0.35s; }
+  .hero__icon:nth-of-type(5) {
+    width: 90%;
+    animation-delay: 0.85s; }
+    .hero__icon:nth-of-type(5) i {
+      animation-delay: 0.85s; }
   .hero__icon i {
     position: absolute;
     top: 100%;
