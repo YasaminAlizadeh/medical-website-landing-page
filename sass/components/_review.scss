@@ -1,0 +1,57 @@
+.feedback__box {
+  @include grid(center, center, 1rem);
+
+  .box__header {
+    @include grid(flex-start, center, (0 1rem));
+
+    width: 100%;
+    grid-template-columns: min(100%, 7.5rem) 1fr;
+    grid-template-areas: "img name" "img location" "img rating";
+
+    .img__container {
+      grid-area: img;
+      width: 100%;
+      position: relative;
+      aspect-ratio: 1;
+      border-radius: 1rem;
+      overflow: hidden;
+      background-color: rgb(0, 187, 162);
+
+      .header__img {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-55%, 0);
+        width: 200%;
+        object-fit: cover;
+      }
+    }
+
+    .header__name {
+      grid-area: name;
+    }
+
+    .header__location {
+      grid-area: location;
+    }
+
+    .header__rating {
+      @include flex(row, center, center, 0.1rem);
+
+      grid-area: rating;
+
+      .rating__star {
+        color: $clr-secondary;
+
+        &.rating__star--highlighted {
+          color: rgb(255, 153, 0);
+        }
+      }
+    }
+  }
+
+  .box__body {
+    text-align: left;
+    color: $clr-secondary;
+  }
+}
