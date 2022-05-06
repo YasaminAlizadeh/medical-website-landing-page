@@ -50,10 +50,10 @@ const changePopularItems = (label) => {
 
     slide.innerHTML = element;
 
-    splide.add(slide);
+    splide1.add(slide);
   });
 
-  splide.refresh();
+  splide1.refresh();
 };
 
 document.addEventListener("DOMContentLoaded", () => {
