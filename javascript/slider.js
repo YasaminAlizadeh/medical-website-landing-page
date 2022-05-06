@@ -44,5 +44,7 @@ const slider = document.querySelector("#slider");
 const sliderContent = document.querySelector("#slider-content");
 
 document.addEventListener("DOMContentLoaded", () => {
-  slider.style.height = `${sliderContent.offsetHeight}px`;
+  setTimeout(() => {
+    slider.style.height = `${sliderContent.offsetHeight}px`;
+  }, 10);
 });
