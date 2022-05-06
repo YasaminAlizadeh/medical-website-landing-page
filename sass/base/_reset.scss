@@ -19,7 +19,7 @@ body {
   main {
     display: grid;
     grid-template-columns: 100%;
-    gap: 10rem;
+    gap: min(15vw, 15rem);
   }
 }
 
