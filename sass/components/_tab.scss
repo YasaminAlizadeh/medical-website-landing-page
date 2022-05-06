@@ -1,0 +1,13 @@
+.tab__item {
+  box-shadow: inset 0 0 0 0.1rem $clr-grey;
+
+  .splide__slide__container {
+    @include flex(column, space-between, center, 1rem);
+    padding: min(5vw, 2rem) 0;
+    font-weight: 500;
+
+    .item__icon {
+      @extend .center-items;
+    }
+  }
+}
