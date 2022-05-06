@@ -535,7 +535,7 @@ h2 {
       margin-top: auto; }
       .hero__wrapper .hero--right .hero__img img {
         z-index: 1;
-        width: min(50vw, 50rem); }
+        width: min(40vw, 50rem); }
 
 .search__wrapper {
   color: #0a172e;
