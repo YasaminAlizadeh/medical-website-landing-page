@@ -102,3 +102,8 @@ document.addEventListener("DOMContentLoaded", () => {
     slider3.style.height = `${sliderContent3.offsetHeight}px`;
   }, 10);
 });
+
+window.addEventListener("resize", () => {
+  slider1.style.height = `${sliderContent1.offsetHeight}px`;
+  slider3.style.height = `${sliderContent3.offsetHeight}px`;
+});
