@@ -14,7 +14,7 @@
     }
 
     .feedbacks__slider {
-      @include grid(center, center, 1rem);
+      @include grid(center, center, 3rem);
 
       grid-area: slider;
       width: 100%;
