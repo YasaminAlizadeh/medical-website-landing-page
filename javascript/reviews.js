@@ -47,13 +47,18 @@ const displayReview = () => {
 
   splide3.refresh();
 
+  const sliderImgContainer = document.querySelector(".feedback--left");
   const sliderBigImage = document.querySelector(".feedbacks__img");
+
+  splide3.on("move", () => {
+    sliderImgContainer.classList.remove("feedback--animated");
+  });
 
   splide3.on("visible", (slider) => {
     sliderBigImage.style.backgroundImage = `url(${
       slider.slide.querySelector(".header__img")?.src
     })`;
-    console.log(slider.slide.querySelector(".header__img")?.src);
+    sliderImgContainer.classList.add("feedback--animated");
   });
 };
 
