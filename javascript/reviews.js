@@ -46,6 +46,15 @@ const displayReview = () => {
   });
 
   splide3.refresh();
+
+  const sliderBigImage = document.querySelector(".feedbacks__img");
+
+  splide3.on("visible", (slider) => {
+    sliderBigImage.style.backgroundImage = `url(${
+      slider.slide.querySelector(".header__img")?.src
+    })`;
+    console.log(slider.slide.querySelector(".header__img")?.src);
+  });
 };
 
 document.addEventListener("DOMContentLoaded", () => {
