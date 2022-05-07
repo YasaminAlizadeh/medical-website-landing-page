@@ -45,7 +45,7 @@
       width: min(100%, 75rem);
     }
 
-    .hero__btns {
+    .hero__achievments {
       @include grid(center, center, 1rem);
 
       @media screen and (min-width: #{$breakpoint-lg}px) {
@@ -54,10 +54,16 @@
         width: min(100%, 45rem);
       }
 
-      .hero__btn {
+      .hero__achievment {
         @include grid(center, center, 1.5rem);
         @include color-scheme($clr-dark, $clr-light);
+
+        width: 100%;
         grid-template-columns: auto 1fr;
+        padding: min(5vw, 1rem) min(5vw, 1.5rem);
+        font-weight: 500;
+        border-radius: 0.5rem;
+        text-align: justify;
       }
     }
   }
