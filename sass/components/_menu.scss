@@ -66,5 +66,36 @@
     @media screen and (min-width: #{$breakpoint-md}px) {
       width: max-content;
     }
+
+    .header__btn {
+      position: relative;
+      transition: all 0.5s ease-in-out;
+
+      &:first-of-type {
+        &::before {
+          content: "";
+          background-color: $clr-primary;
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          width: 100%;
+          height: 100%;
+          border-radius: 0.5rem;
+          z-index: -1;
+          transform: translateX(
+            calc(var(--active-index) * 100% + var(--active-index) * 0.5rem)
+          );
+          transition: all 0.3s ease-in-out;
+
+          &:hover {
+            background-color: yellow;
+          }
+        }
+      }
+
+      &.header__btn--active {
+        color: $clr-light;
+      }
+    }
   }
 }

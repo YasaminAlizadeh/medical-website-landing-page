@@ -1,6 +1,7 @@
 .btn {
   @include grid-center;
 
+  position: relative;
   width: 100%;
   padding: min(5vw, 1rem) min(5vw, 1.5rem);
   border: 0;
