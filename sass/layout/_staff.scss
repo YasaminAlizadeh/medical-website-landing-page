@@ -28,6 +28,10 @@
               @media screen and (min-width: #{$breakpoint-xl}px) {
                 grid-template-columns: repeat(4, minmax(0, 1fr));
               }
+
+              .staff__item {
+                cursor: pointer;
+              }
             }
           }
         }

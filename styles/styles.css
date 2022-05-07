@@ -873,6 +873,8 @@ h2 {
       @media screen and (min-width: 1200px) {
         .staff__wrapper .container .slider .staff__slider .slider__track .staff__list .staff__slide {
           grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+      .staff__wrapper .container .slider .staff__slider .slider__track .staff__list .staff__slide .staff__item {
+        cursor: pointer; }
 
 .feedbacks__wrapper .container {
   display: grid;
@@ -1286,7 +1288,6 @@ h2 {
     .slider .splide .splide__slide {
       width: 100%;
       border-radius: 1rem;
-      cursor: pointer;
       text-align: center; }
     .slider .splide .pagination__bar {
       position: relative;
@@ -1312,6 +1313,7 @@ h2 {
       opacity: 1; }
 
 .tab__item {
+  cursor: pointer;
   box-shadow: inset 0 0 0 0.1rem rgba(0, 0, 0, 0.075);
   transition: box-shadow 0.3s ease-in-out; }
   .tab__item:hover {
