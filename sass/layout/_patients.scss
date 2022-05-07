@@ -35,12 +35,16 @@
         background-color: $clr-accent;
         border-radius: 78% 15% 10% 0% / 47% 33% 0% 46%;
 
+        &.feedback--animated {
+          animation: fade 0.5s ease-in-out forwards;
+        }
+
         .feedbacks__img {
           width: 100%;
           aspect-ratio: 1;
           background-image: url("../assets/images/feedback/feedback_4.png");
           background-size: cover;
-          background-position: center;
+          background-position: top;
           background-repeat: no-repeat;
         }
       }
@@ -53,7 +57,21 @@
             position: absolute;
             top: 0;
             left: 0;
+          }
+        }
       }
     }
+  }
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  100% {
+    opacity: 1;
+    visibility: visible;
   }
 }
