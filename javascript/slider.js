@@ -93,8 +93,12 @@ document.addEventListener("DOMContentLoaded", function () {
 const slider1 = document.querySelector("#slider1");
 const sliderContent1 = document.querySelector("#splide1");
 
+const slider3 = document.querySelector("#slider3");
+const sliderContent3 = document.querySelector("#splide3");
+
 document.addEventListener("DOMContentLoaded", () => {
   setTimeout(() => {
     slider1.style.height = `${sliderContent1.offsetHeight}px`;
+    slider3.style.height = `${sliderContent3.offsetHeight}px`;
   }, 10);
 });
