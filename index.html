@@ -144,80 +144,82 @@
           </div>
 
           <div class="search__wrapper">
-            <form action="" id="search-form" class="search__form">
-              <div class="form__field">
-                <div class="form__icon">
+            <div class="container">
+              <form action="" id="search-form" class="search__form">
+                <div class="form__field">
+                  <div class="form__icon">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                  </div>
+                  <input
+                    type="search"
+                    name="searchTerm"
+                    id="term-input"
+                    class="form__input"
+                    placeholder="Search Doctor, Conditions or Producers"
+                  />
+                </div>
+
+                <div class="form__field">
+                  <div class="form__icon">
+                    <i class="fa-solid fa-location-dot"></i>
+                  </div>
+                  <input
+                    type="search"
+                    name="searchLocation"
+                    id="location-input-1"
+                    class="form__input"
+                    placeholder="Set your location"
+                  />
+                </div>
+
+                <button type="submit" class="btn btn--primary form__submit">
                   <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+
+                <div class="search__suggestions">
+                  <b>You may be looking for</b>
+
+                  <ul class="suggestions__list">
+                    <li class="suggestion__item">
+                      <span class="suggestion__text">Family Medicine</span>
+                      &#10005;
+                    </li>
+
+                    <li class="suggestion__item">
+                      <span class="suggestion__text">Pediatrics</span>
+                      &#10005;
+                    </li>
+
+                    <li class="suggestion__item">
+                      <span class="suggestion__text">Top Hospital</span>
+                      &#10005;
+                    </li>
+
+                    <li class="suggestion__item">
+                      <span class="suggestion__text">Family Medicine</span>
+                      &#10005;
+                    </li>
+
+                    <li class="suggestion__item">
+                      <span class="suggestion__text">Telehealth</span>
+                      &#10005;
+                    </li>
+
+                    <li class="suggestion__item">
+                      <span class="suggestion__text">COVID-19</span>
+                      &#10005;
+                    </li>
+
+                    <li class="suggestion__item">
+                      <span class="suggestion__text">Orthopedic Surgery</span>
+                      &#10005;
+                    </li>
+
+                    <li class="suggestion__item suggestion__more">More</li>
+                  </ul>
                 </div>
-                <input
-                  type="search"
-                  name="searchTerm"
-                  id="term-input"
-                  class="form__input"
-                  placeholder="Search Doctor, Conditions or Producers"
-                />
-              </div>
-
-              <div class="form__field">
-                <div class="form__icon">
-                  <i class="fa-solid fa-location-dot"></i>
-                </div>
-                <input
-                  type="search"
-                  name="searchLocation"
-                  id="location-input-1"
-                  class="form__input"
-                  placeholder="Set your location"
-                />
-              </div>
-
-              <button type="submit" class="btn btn--primary form__submit">
-                <i class="fa-solid fa-magnifying-glass"></i>
-              </button>
-
-              <div class="search__suggestions">
-                <b>You may be looking for</b>
-
-                <ul class="suggestions__list">
-                  <li class="suggestion__item">
-                    <span class="suggestion__text">Family Medicine</span>
-                    &#10005;
-                  </li>
-
-                  <li class="suggestion__item">
-                    <span class="suggestion__text">Pediatrics</span>
-                    &#10005;
-                  </li>
-
-                  <li class="suggestion__item">
-                    <span class="suggestion__text">Top Hospital</span>
-                    &#10005;
-                  </li>
-
-                  <li class="suggestion__item">
-                    <span class="suggestion__text">Family Medicine</span>
-                    &#10005;
-                  </li>
-
-                  <li class="suggestion__item">
-                    <span class="suggestion__text">Telehealth</span>
-                    &#10005;
-                  </li>
-
-                  <li class="suggestion__item">
-                    <span class="suggestion__text">COVID-19</span>
-                    &#10005;
-                  </li>
-
-                  <li class="suggestion__item">
-                    <span class="suggestion__text">Orthopedic Surgery</span>
-                    &#10005;
-                  </li>
-
-                  <li class="suggestion__item suggestion__more">More</li>
-                </ul>
-              </div>
-            </form>
+              </form>
+            </div>
           </div>
         </div>
       </section>

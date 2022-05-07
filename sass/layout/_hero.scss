@@ -17,7 +17,7 @@
   background-position: 75%;
   overflow-x: clip;
 
-  .container {
+  & > .container {
     @include grid(center, center, (0 2rem));
 
     grid-template-columns: 100%;
