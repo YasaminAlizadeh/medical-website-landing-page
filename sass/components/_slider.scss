@@ -4,7 +4,6 @@
   grid-area: slider;
 
   .splide {
-    // position: absolute;
     width: 100%;
 
     .splide__slide {
@@ -12,11 +11,6 @@
       border-radius: 1rem;
       cursor: pointer;
       text-align: center;
-      transition: opacity 0.3s ease-in-out;
-
-      &:hover {
-        opacity: 0.8;
-      }
     }
 
     .pagination__bar {
