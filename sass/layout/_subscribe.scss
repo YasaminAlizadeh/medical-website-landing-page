@@ -1,0 +1,22 @@
+.subscribe__wrapper {
+  position: relative;
+  width: 80%;
+  margin: auto;
+
+  .container {
+    @include grid(center, center, 1.5rem);
+    @include color-scheme($clr-primary, $clr-light);
+
+    padding: min(5vw, 3rem) min(5vw, 2rem);
+    border-radius: 1rem;
+    box-shadow: rgba($clr-dark, 0.25) 0px 50px 100px -20px,
+      rgba($clr-dark, 0.3) 0px 30px 60px -30px;
+    text-align: center;
+
+    .subscribe__form {
+      .btn {
+        @include color-scheme($clr-dark, $clr-light);
+      }
+    }
+  }
+}
