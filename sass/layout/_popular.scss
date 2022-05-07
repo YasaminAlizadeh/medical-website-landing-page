@@ -2,10 +2,10 @@
   .container {
     @include grid(flex-start, flex-start, (5rem 0));
     grid-template-columns: 100%;
-    grid-template-areas: "heading" "labels" "slider";
+    grid-template-areas: "header" "labels" "slider";
 
-    h2 {
-      grid-area: heading;
+    .section__header {
+      grid-area: header;
     }
 
     .tabs__labels {
@@ -53,7 +53,7 @@
 
     @media screen and (min-width: #{$breakpoint-xs}px) {
       grid-template-columns: auto 1fr;
-      grid-template-areas: "heading heading" "labels slider";
+      grid-template-areas: "header header" "labels slider";
     }
   }
 }

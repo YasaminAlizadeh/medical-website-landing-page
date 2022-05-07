@@ -2,15 +2,11 @@
   .container {
     @include grid(center, center, 1rem);
 
-    grid-template-areas: "heading" "description" "slider";
+    grid-template-areas: "header" "slider";
     grid-template-columns: 100%;
 
-    .feedbacks__title {
-      grid-area: heading;
-    }
-
-    .feedbacks__description {
-      grid-area: description;
+    .section__header {
+      grid-area: header;
     }
 
     .feedbacks__slider {

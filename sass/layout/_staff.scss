@@ -3,14 +3,10 @@
     @include grid(center, center, 1rem);
 
     grid-template-columns: 100%;
-    grid-template-areas: "heading" "description" "slider";
+    grid-template-areas: "header" "slider";
 
-    .staff__title {
-      grid-area: heading;
-    }
-
-    .staff__description {
-      grid-area: description;
+    .section__header {
+      grid-area: header;
     }
 
     .slider {

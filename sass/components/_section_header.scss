@@ -1,8 +1,22 @@
-.title {
+.section__header {
+  @include flex(column, center, center, 1rem);
+
+  width: min(100%, 50rem);
+  text-align: left;
+
+  @media screen and (max-width: #{$breakpoint-md - 1}px) {
+    text-align: center;
+  }
+
+  &.section__header--centered {
+    text-align: center;
+  }
+
+  .title {
+  }
 }
 
 .description {
   width: min(100%, 100rem);
   color: $clr-secondary;
-  text-align: center;
 }
