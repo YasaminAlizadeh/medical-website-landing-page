@@ -1,5 +1,10 @@
 .tab__item {
   box-shadow: inset 0 0 0 0.1rem $clr-grey;
+  transition: box-shadow 0.3s ease-in-out;
+
+  &:hover {
+    box-shadow: inset 0 0 0 0.25rem rgba($clr-accent, 0.75);
+  }
 
   .splide__slide__container {
     @include flex(column, space-between, center, 1rem);
