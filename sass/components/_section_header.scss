@@ -1,7 +1,7 @@
 .section__header {
   @include flex(column, center, center, 1rem);
 
-  width: min(100%, 50rem);
+  width: min(100%, 75rem);
   text-align: left;
 
   @media screen and (max-width: #{$breakpoint-md - 1}px) {
