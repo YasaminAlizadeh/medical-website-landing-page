@@ -11,7 +11,7 @@ const reviews = [
   },
   {
     name: "Matilda Beck",
-    image: "./assets/images/feedback/feedback_4.png",
+    image: "./assets/images/feedback/feedback_3.png",
     location: "Berlin, Germany",
     rating: 3,
     text: `Lorem ipsum dolor sit amet consectetur, adipisicing elit.
@@ -21,7 +21,7 @@ const reviews = [
   },
   {
     name: "Elin Blackburn",
-    image: "./assets/images/feedback/feedback_4.png",
+    image: "./assets/images/feedback/feedback_2.png",
     location: "Paris, France",
     rating: 5,
     text: `Lorem ipsum dolor sit amet consectetur, adipisicing elit.
@@ -29,7 +29,7 @@ const reviews = [
   },
   {
     name: "Tiana Sampson",
-    image: "./assets/images/feedback/feedback_4.png",
+    image: "./assets/images/feedback/feedback_1.png",
     location: "Toronto, Canada",
     rating: 4,
     text: `Lorem ipsum dolor similique, vel nesciunt soluta provident
