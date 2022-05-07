@@ -7,6 +7,7 @@ const staffData = shuffleArray([...staff, ...staff, ...staff]); // just shufflin
 
 const displayStaffCards = (perPage) => {
   staffList.innerHTML = "";
+  let slide;
 
   staffData.forEach((person, index) => {
     const { name, image, speciality } = person;
