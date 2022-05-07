@@ -17,6 +17,7 @@
       @include grid(center, center, 1rem);
 
       grid-area: slider;
+      width: 100%;
       grid-template-columns: repeat(2, minmax(0, 1fr));
       margin-top: 5rem;
 
@@ -46,6 +47,12 @@
 
       .feedback--right {
         width: 100%;
+
+        .slider {
+          .splide {
+            position: absolute;
+            top: 0;
+            left: 0;
       }
     }
   }
