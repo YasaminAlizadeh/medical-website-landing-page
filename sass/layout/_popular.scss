@@ -22,6 +22,8 @@
       }
 
       .tab__label {
+        position: relative;
+        padding: 0.5rem 1rem;
         color: $clr-secondary;
         font-weight: 500;
         cursor: pointer;
@@ -30,6 +32,24 @@
         &.tab__label--active {
           color: $clr-dark;
           font-weight: 600;
+        }
+
+        &:first-of-type {
+          &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 0.5rem;
+            background-color: $clr-accent;
+            z-index: -1;
+            transform: translateY(
+              calc(var(--active-index) * 100% + var(--active-index) * 1rem)
+            );
+            transition: transform 0.1s ease-in-out;
+          }
         }
 
         &:hover {

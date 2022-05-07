@@ -1,10 +1,12 @@
+const labelsContainer = document.querySelector(".tabs__labels");
 const listLabels = document.querySelectorAll(".tab__label");
 const itemsList = document.querySelector("#search-list");
 
-listLabels.forEach((label) => {
+listLabels.forEach((label, index) => {
   label.addEventListener("click", () => {
     listLabels.forEach((label) => label.classList.remove("tab__label--active"));
 
+    labelsContainer.style.setProperty("--active-index", index);
     label.classList.add("tab__label--active");
     changePopularItems(label.innerText.toLowerCase());
   });
